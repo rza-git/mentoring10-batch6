@@ -4,7 +4,7 @@
   "description": "MVC + Repositories Design Pattern",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test && jest --detectOpenHandles --runInBand --forceExit --coverage --watchAll",
+    "test": "NODE_ENV=test && npx sequelize-cli db:create --env test && npx sequelize-cli db:migrate --env test && jest --detectOpenHandles --runInBand --forceExit --coverage --watchAll",
     "dev": "nodemon ./bin/www.js",
     "migrate": "NODE_ENV=test && npx sequelize-cli db:create --env test && npx sequelize-cli db:migrate --env test"
   },
