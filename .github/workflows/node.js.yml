@@ -47,8 +47,6 @@ jobs:
     - run: npm ci
     - name: install dependencies
       run: npm install
-    - name: migrate database
-      run: npm run migrate
     - name: test
       run: npm run test
       env:
