@@ -30,3 +30,10 @@ jobs:
     - run: npm run build --if-present
     - name: test
       run: npm run test
+      env:
+        DB_USER: postgres
+        DB_PASSWORD: postgres
+        DB_NAME: cicd-test
+        DB_TEST: app-test
+        BASE_URL: http://localhost:3000
+        NODE_ENV:development
